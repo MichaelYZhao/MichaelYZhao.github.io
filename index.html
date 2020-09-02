@@ -13,6 +13,17 @@
     <title>Calculator</title>
 </head>
 
+<script>
+    $(document).ready(function() {
+        $("cust-btn").click(function(){
+            var conditions = [];
+            $.each($("input[name='checkbox']:checked"), function(){
+                conditions.push($(this).val());
+            });
+            alert("conditions are: " + conditions.join(", "));
+        });
+    });
+</script>
 
 <div class="container">
     <div class="row">
@@ -82,14 +93,6 @@
         </div>
     </div>
 </div>
-<button class='cust-btn' id="submit">Assess Risk</button>
-
-<script>
-   var submitButton = document.getElementById("submit")
-
-submitButton.addEventListener('click', function() {
-    alert('Hello World')
-}, false);
-</script>
+<button class="cust-btn" id="submit">Assess Risk</button>
 
 </html>
