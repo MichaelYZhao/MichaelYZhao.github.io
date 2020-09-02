@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Calculator</title>
+</head>
+
+<form method="POST" action="/">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card" style="margin:50px 0">
+                    <div class="card-header"> Select all conditions that apply to the patient:</div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="emerg" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Emergency Procedure
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="CHD" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Severe CHD
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="single-ventricle" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Single-ventricle Physiology
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="surgery30days" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Surgery within 30 day
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="inotropic" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Inotropic Support
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="CPR" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Preoperative CPR
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="kidney" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Acute or Chronic Kidney Injury
+                        </li>
+                        <li class="list-group-item">
+                            <label class="checkbox">
+                                <input type="checkbox" value="kidney" name="checkbox" />
+                                <span class="default"></span>
+                            </label>
+                            Mechanical ventilation
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class='cust-btn' id="submit">Assess Risk</button>
+
+</form>
+
+</html>
