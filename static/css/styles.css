@@ -2,6 +2,7 @@
     25% {height: 0;width: 10px;}
     50% {height: 20px;width: 10px;}
   }
+  
 .checkbox{
     background-color:#fff;
     display:inline-block;
@@ -64,4 +65,11 @@
 }
 .cust-btn:hover{
   background: #3B5C76;
+}
+
+.displayResult{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }

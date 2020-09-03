@@ -14,15 +14,60 @@
 </head>
 
 <script>
-    $(document).ready(function() {
-        $("cust-btn").click(function(){
+    $(document).ready(function () {
+        $("button.cust-btn").click(function () {
             var conditions = [];
-            $.each($("input[name='checkbox']:checked"), function(){
+            $.each($("input[name='checkbox']:checked"), function () {
                 conditions.push($(this).val());
             });
-            alert("conditions are: " + conditions.join(", "));
+            document.getElementById("result").innerHTML = "The patient is " + calculator(conditions);
         });
     });
+
+    function calculator(conditions) {
+        var count = 0;
+        conditions.forEach(element => {
+            switch (element) {
+                case "emerg":
+                    count += 1;
+                    break;
+                case "CHD":
+                    count += 1;
+                    break;
+                case "single-ventricle":
+                    count += 1;
+                    break;
+                case "surgery30days":
+                    count += 1;
+                    break;
+                case "inotropic":
+                    count += 1;
+                    break;
+                case "CPR":
+                    count += 2;
+                    break;
+                case "kidney":
+                    count += 3;
+                    break;
+                case "ventilation":
+                    count += 4;
+                    break;
+            }
+        });
+
+        switch (count) {
+            case 1: return 'low risk, 0% mortality';
+            case 2: return 'low risk, 1% mortality';
+            case 3: return 'low risk, 1.5% mortality';
+            case 4: return 'medium risk, 4% mortality';
+            case 5: return 'medium risk, 6% mortality';
+            case 6: return 'medium risk, 9% mortality';
+            case 7: return 'high risk, 15% mortality';
+            case 8: return 'high risk, 24% mortality';
+            case 9: return 'high risk, 36% mortality';
+            case 10: return 'high risk, 48% mortality';
+        }
+    }
 </script>
 
 <div class="container">
@@ -94,5 +139,9 @@
     </div>
 </div>
 <button class="cust-btn" id="submit">Assess Risk</button>
+
+<div class="displayResult">
+    <h5 id="result"></h5>
+</div>
 
 </html>
