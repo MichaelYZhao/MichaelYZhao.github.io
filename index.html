@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/styles.css">
-    <title>Calculator</title>
+    <title>Risk Calculator</title>
 </head>
 
 <script>
@@ -56,20 +56,24 @@
         });
 
         switch (count) {
-            case 1: return 'low risk, 0% mortality';
-            case 2: return 'low risk, 1% mortality';
-            case 3: return 'low risk, 1.5% mortality';
-            case 4: return 'medium risk, 4% mortality';
-            case 5: return 'medium risk, 6% mortality';
-            case 6: return 'medium risk, 9% mortality';
-            case 7: return 'high risk, 15% mortality';
-            case 8: return 'high risk, 24% mortality';
-            case 9: return 'high risk, 36% mortality';
-            case 10: return 'high risk, 48% mortality';
+            case 1: return 'low risk, 0% in-hospital mortality';
+            case 2: return 'low risk, 1% in-hospital mortality';
+            case 3: return 'low risk, 1.5% in-hospital mortality';
+            case 4: return 'medium risk, 4% in-hospital mortality';
+            case 5: return 'medium risk, 6% in-hospital mortality';
+            case 6: return 'medium risk, 9% in-hospital mortality';
+            case 7: return 'high risk, 15% in-hospital mortality';
+            case 8: return 'high risk, 24% in-hospital mortality';
+            case 9: return 'high risk, 36% in-hospital mortality';
+            case 10: return 'high risk, 48% in-hospital mortality';
             default: return 'beyond the discriminative ability of the risk stratification model';
         }
     }
 </script>
+
+<div class="display">
+    <h5>Risk Stratification Score for Children With Congenital Heart Disease Undergoing Noncardiac Surgery</h5>
+</div>
 
 <div class="container">
     <div class="row">
@@ -141,7 +145,7 @@
 </div>
 <button class="cust-btn" id="submit">Assess Risk</button>
 
-<div class="displayResult">
+<div class="display">
     <h5 id="result"></h5>
 </div>
 
