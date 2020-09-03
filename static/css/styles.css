@@ -69,8 +69,7 @@
 
 .displayResult{
   padding:16px 16px;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   justify-content: center;
   text-align: center;
 }
