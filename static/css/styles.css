@@ -67,8 +67,14 @@
   background: #3B5C76;
 }
 
-.display{
+.displayResult{
   height: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display{
   display: flex;
   justify-content: center;
   align-items: center;
