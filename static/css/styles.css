@@ -73,3 +73,10 @@
   justify-content: center;
   align-items: center;
 }
+
+.displayHeader{
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
