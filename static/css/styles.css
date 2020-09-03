@@ -68,7 +68,7 @@
 }
 
 .displayResult{
-  padding:16px;
+  padding:16px 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
